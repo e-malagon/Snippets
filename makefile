@@ -4,8 +4,8 @@ all: sleepy plugins libplugin1 libplugin2
 sleepy: Sleepy/Sleepy.cpp
 	g++ --std=c++14 -o sleepy Sleepy/Sleepy.cpp -pthread
 
-plugins: Plugins/Plugins.cpp Plugins/Plugin.cpp
-	g++ --std=c++11 -rdynamic -ggdb -o plugins Plugins/Plugins.cpp Plugins/Plugin.cpp -ldl
+plugins: Plugins/Main.cpp Plugins/Plugin.cpp
+	g++ --std=c++11 -rdynamic -ggdb -o plugins Plugins/Main.cpp Plugins/Plugin.cpp -ldl
 
 libplugin1: Plugins/Plugin1.cpp
 	g++ -shared -fPIC -ggdb -Wl,-soname,libplugin1.so -o libplugin1.so Plugins/Plugin1.cpp

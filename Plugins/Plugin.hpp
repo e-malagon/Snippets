@@ -27,7 +27,7 @@ SOFTWARE.
 class Plugin {
 public:
     // Plugin methods, this is pure virtual in this example but add an
-    // implementation to have a default Module implementation
+    // implementation to have a default implementation
     virtual void run() = 0;
     
     // Instantiate a new plugin without being worried of the factory
@@ -43,7 +43,8 @@ public:
 
 private:
     // Pointer to a self-registered factory
-    // Use std::map<std::string, Factory*> to
-    // allow more than one plugin at a time.
+    // Use std::map<std::string, Factory*>
+    // or any other container to allow more
+    // than one plugin at a time.
 	static Factory* factory;
 };

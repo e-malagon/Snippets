@@ -33,6 +33,7 @@ SOFTWARE.
 
 using namespace std::chrono_literals;
 
+//This class allows having control of the life of a secondary thread
 class Sleepy {
    public:
     Sleepy() : _alive(false), _bussy(false) {

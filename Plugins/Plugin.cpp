@@ -39,7 +39,7 @@ Plugin* Plugin::newPlugin() {
 }
 
 Plugin::Factory::Factory() {
-    // Register this factory
+    // Register this as default factory
     factory = this;
 }
 
