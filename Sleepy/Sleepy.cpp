@@ -150,5 +150,6 @@ int main() {
         std::cout << "Background task is still running." << std::endl;
         task.detach();  //Allow the OS to clean up
     }
+    std::cout << "Exit." << std::endl;
     return 0;
 }
