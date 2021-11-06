@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/edgar/workspace/Snippets'
+g++ --std=c++14 -o sleepy Sleepy/Sleepy.cpp -pthread
+g++ --std=c++11 -rdynamic -ggdb -o plugins Plugins/Main.cpp Plugins/Plugin.cpp -ldl
+g++ -shared -fPIC -ggdb -Wl,-soname,libplugin1.so -o libplugin1.so Plugins/Plugin1.cpp
+g++ -shared -fPIC -ggdb -Wl,-soname,libplugin2.so -o libplugin2.so Plugins/Plugin2.cpp
+echo "Building"
+make: Leaving directory '/home/edgar/workspace/Snippets'
+ 

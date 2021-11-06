@@ -3,9 +3,11 @@
 Set of snippets
 
 1.- Control long-running tasks in a secondary thread(Sleepy)
+
 2.- C++ factory pattern for dynamic plugin loading on Linux(Plugin)
 
-# License
+
+## License
 
 MIT License
 
